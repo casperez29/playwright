@@ -5,6 +5,7 @@ setDefaultTimeout(60 * 1000 * 1)
 import { expect } from "@playwright/test";
 import { pageFixtures } from "../../hooks/pageFixtures";
 
+
 Given('User navigates to the application', async function () {
     await pageFixtures.page.goto("https://qa.mygo.gorentals.com/");
 });

@@ -1,18 +1,25 @@
 {
   "name": "pw_cucumber",
   "version": "1.0.0",
+  "description": "Playright Cucumber Typscript Test Automation Framework",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test"
+    "test": "cucumber-js test",
+    "posttest": "npx ts-node src/helper/report.ts",
+    "report": "npx ts-node src/helper/report.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cucumber",
+    "cucumber - TS",
+    "playwright-cucumber"
+  ],
+  "author": "Casius Laurent Perez",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@cucumber/cucumber": "^11.0.0",
     "@playwright/test": "^1.47.0",
     "@types/node": "^22.5.4",
+    "multiple-cucumber-html-reporter": "^3.7.0",
     "ts-node": "^10.9.2"
   }
 }
