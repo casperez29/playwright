@@ -8,11 +8,11 @@ let context: BrowserContext;
 
 BeforeAll(async function(){
     browser = await chromium.launch({headless:false});
-});
+})
 
 Before(async function () {
     context = await browser.newContext();
-    const page = await browser.newPage();
+    const page = await context.newPage();
     pageFixtures.page = page;
     await page.goto("https://qa.mygo.gorentals.com/");
 });
@@ -24,9 +24,8 @@ After(async function({pickle, result}){
         const img = await pageFixtures.page.screenshot({ path: `./test-results/screenshots/${pickle.name}.png`, type: "png"})
         await this.attach(img, "image/png");
     }
-
     await pageFixtures.page.close();
-    await browser.close();
+    await context.close();
 
 });
 

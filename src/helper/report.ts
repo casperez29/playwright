@@ -4,7 +4,7 @@ report.generate({
     jsonDir: "test-results",
     reportPath: "test-results/reports/",
     reportName: "Playwright Automation Report",
-    pageTitle: "BookCart App test report",
+    pageTitle: "MyGO Automation",
     displayDuration: false,
     metadata: {
         browser: {
